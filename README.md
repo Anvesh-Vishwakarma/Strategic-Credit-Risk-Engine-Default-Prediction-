@@ -1,5 +1,3 @@
-# Strategic Credit Risk Engine Default Prediction
-
 # Credit Risk Prediction 💳
 
 This project focuses on building a machine learning model to predict the probability that somebody will experience financial distress in the next two years. It utilizes historical credit data to perform deep exploratory data analysis (EDA), data cleaning, and predictive modeling.
