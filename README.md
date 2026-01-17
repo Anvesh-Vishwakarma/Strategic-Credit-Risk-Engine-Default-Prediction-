@@ -2,7 +2,7 @@
 
 This project focuses on building a machine learning model to predict the probability that somebody will experience financial distress in the next two years. It utilizes historical credit data to perform deep exploratory data analysis (EDA), data cleaning, and predictive modeling.
 
-## 🚀 Overview
+## Overview
 The primary goal is to identify high-risk borrowers using features like monthly utilization, age, debt ratio, and past-due history. The project handles significant data challenges including missing values, extreme outliers, and class imbalance.
 
 ## 📊 Dataset Information
@@ -28,13 +28,37 @@ The project employs a **Logistic Regression** model specifically tuned for imbal
 - **Configuration:** `class_weight='balanced'`, `max_iter=1000`.
 - **Serialization:** The trained model and feature list are saved using `joblib` as `credit_risk_logreg.pkl`.
 
-## ⚙️ Requirements
-To run this notebook, you will need:
-- Python 3.x
-- pandas
-- numpy
-- scikit-learn
-- joblib
+## 🖥️ Live Demo (Streamlit)
+The model is deployed as an interactive web application where users can:
 
-```bash
-pip install pandas numpy scikit-learn joblib
+* Input customer details
+* View default probability
+* Receive a credit risk decision (Low / High risk)
+
+## 🚀 How to run 
+
+### 1️. Clone the Repository
+```
+```
+### 2. Install Dependencies
+```
+pip install -r requirements.txt
+```
+
+### 3. Run the streamlit app
+
+```
+Streamlit run app.py
+```
+
+
+
+
+
+
+
+
+
+
+
+
