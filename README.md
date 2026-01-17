@@ -22,11 +22,20 @@ The notebook implements a robust cleaning pipeline:
 * **Feature Engineering:** Cleaned "error" values in delinquency counts (e.g., replacing values > 13 with representative high-risk buckets).
 * **Data Saving:** Processed data is exported to `../data/processed/credit_model_df.csv` for modeling.
 
-## 🤖 Modeling
-The project employs a **Logistic Regression** model specifically tuned for imbalanced data:
-- **Algorithm:** Logistic Regression.
-- **Configuration:** `class_weight='balanced'`, `max_iter=1000`.
-- **Serialization:** The trained model and feature list are saved using `joblib` as `credit_risk_logreg.pkl`.
+## 🤖 Model Explainability
+Each feature coefficient represents its impact on default risk:
+
+* **Positive coefficient** → Increases default probability
+* **Negative coefficient** → Decreases default probability
+
+Odds ratios were used to explain how a unit increase in a feature changes default risk.
+
+## 🎯 Business Decision Threshold
+Instead of using a default 0.5 threshold, a 0.4 probability cutoff was selected to:
+
+* Improve recall of high-risk customers
+* Balance false positives and false negatives
+* Reflect real-world credit approval trade-offs
 
 ## 🖥️ Live Demo (Streamlit)
 The model is deployed as an interactive web application where users can:
