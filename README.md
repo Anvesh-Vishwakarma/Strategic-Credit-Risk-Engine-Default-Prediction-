@@ -15,6 +15,25 @@ The project uses the "Give Me Some Credit" dataset. Key features include:
   - `MonthlyIncome`: Monthly income.
   - `NumberOfOpenCreditLinesAndLoans`: Number of open loans (installment and real estate).
   - `NumberOfTime30-59DaysPastDueNotWorse`: Number of times borrower has been 30-59 days past due.
+  - 
+## 📌 Features
+* Real-time Risk Prediction: Instant classification of borrowers based on their financial history.
+* Explainable AI (XAI): Provides Odds Ratios for each feature, allowing users to understand which factors (e.g., Debt Ratio, Late Payments) most influence the risk score.
+* Robust Data Cleaning: Automated pipeline to handle missing values, cap outliers at the 99th percentile, and bucket high-frequency categories for better model stability.
+* Imbalance Handling: Utilizes "Balanced" class weights and SMOTE (Synthetic Minority Over-sampling Technique) to ensure the model accurately identifies rare high-risk events.
+* Performance Visualization: Built-in ROC curve demonstration to track model discriminative power.
+
+## 🧠 Problem Statement
+Financial institutions lose billions annually due to credit defaults. Traditional manual underwriting is:
+
+* Slow: Hindering the customer experience.
+* Subjective: Leading to inconsistent risk thresholds.
+* Inefficient: Difficult to scale across thousands of applications.
+
+Identifying "Serious Delinquency" (defaulting within 2 years) is critical for maintaining bank liquidity and protecting investor interests.
+
+## 💡 Solution Overview
+This project implements a Logistic Regression pipeline to automate credit scoring. The solution uses a data-driven approach: it analyzes 150,000 historical records to learn patterns between borrower behavior and default risk. It handles real-world data issues like missing income records and extreme outliers before feeding them into a model optimized for imbalanced datasets.
 
 ## 🛠️ Data Preprocessing & Cleaning
 The notebook implements a robust cleaning pipeline:
